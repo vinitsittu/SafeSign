@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RSA Key Generator + Encrypt/Decrypt + Sign/Verify</title>
+    <link rel="stylesheet" href="q.css">
+</head>
+<body>
+    <h1>RSA Key Generator (Encryption/Decryption + Signing/Verification)</h1>
+
+    <section>
+        <h2>Encryption/Decryption Keys</h2>
+        <button onclick="generateKeys()">Generate Encryption Keys</button><br><br>
+        <textarea id="publicKey" rows="8" cols="80" placeholder="Public Key"></textarea><br><br>
+        <textarea id="privateKey" rows="8" cols="80" placeholder="Private Key"></textarea>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Encryption / Decryption</h2>
+        <textarea id="encryptMessage" rows="4" cols="80" placeholder="Enter message to encrypt"></textarea><br><br>
+        <button onclick="encryptMessage()">Encrypt</button><br><br>
+        <textarea id="encryptedText" rows="4" cols="80" placeholder="Encrypted (Base64)"></textarea><br><br>
+        <button onclick="decryptMessage()">Decrypt</button><br><br>
+        <textarea id="decryptedText" rows="4" cols="80" placeholder="Decrypted message"></textarea>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Signing/Verification Keys</h2>
+        <button onclick="generateSignKeys()">Generate Signing Keys</button><br><br>
+        <textarea id="signPublicKey" rows="8" cols="80" placeholder="Signing Public Key"></textarea><br><br>
+        <textarea id="signPrivateKey" rows="8" cols="80" placeholder="Signing Private Key"></textarea>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Signing</h2>
+        <textarea id="messageToSign" rows="4" cols="80" placeholder="Enter message to sign"></textarea><br><br>
+        <button onclick="signMessage()">Sign Message</button><br><br>
+        <textarea id="signature" rows="4" cols="80" placeholder="Signature (Base64)"></textarea>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Verification</h2>
+        <textarea id="messageToVerify" rows="4" cols="80" placeholder="Enter message to verify"></textarea><br><br>
+        <textarea id="signatureToVerify" rows="4" cols="80" placeholder="Paste signature to verify"></textarea><br><br>
+        <button onclick="verifySignature()">Verify Signature</button><br><br>
+        <textarea id="verificationResult" rows="2" cols="80" placeholder="Verification Result"></textarea>
+    </section>
+
+    <script src="q.js"></script>
+</body>
+</html>
